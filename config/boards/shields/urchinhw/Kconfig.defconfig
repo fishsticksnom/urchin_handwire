@@ -1,5 +1,17 @@
-if SHIELD_URCHINHW
+if SHIELD_URCHIN_LEFT
 
-config ZMK_KEYBOARD_NAME
+# Name must be less than 16 characters long!
+config ZMK_URCHINHW
     default "urchinhw"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_URCHINHW_LEFT || SHIELD_URCHINHW_RIGHT
+
+config ZMK_SPLIT
+    default y
+
 endif
